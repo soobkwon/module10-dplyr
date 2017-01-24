@@ -2,16 +2,16 @@
 # Use a different appraoch to accomplish the same tasks as exercise-1
 
 # install and load dplyr
-install.packages("dplyr")
+#install.packages("dplyr")
 library("dplyr")
 
 # Exercise 1: Data Frame Practice
 
 # Install devtools package: allows installations from GitHub
-install.packages('devtools')
+#install.packages('devtools')
 
 # Install "fueleconomy" package from GitHub
-devtools::install_github("hadley/fueleconomy")
+#devtools::install_github("hadley/fueleconomy")
 
 # Require/library the fueleconomy package
 library(fueleconomy)
@@ -20,11 +20,11 @@ library(fueleconomy)
 
 
 # Select the different manufacturers (makes) of the cars in this data set.
-
+cars.manuf <- select(vehicles, make)
 
 # Use the `unique()` function to determine how many different car manufacturers
 # are represented by the data set.
-
+diff.manuf <- length(unique(cars.manuf$make))
 
 # Filter the data set for vehicles manufactured in 1997
 
