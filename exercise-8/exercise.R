@@ -4,14 +4,15 @@
 
 
 #Load in SwissData from data set from data folder and view it to understand what is in it. 
-
+swissdata <- read.csv("data/swissdata.csv")
+View(swissdata)
 
 #Add a column (using dpylr) that is the absolute difference between Education and Examination and call it 
 # Educated.Score
-
+swissdata <- mutate(swissdata, Educated.Score = abs(Education - Examination))
 
 #Which area(s) had the largest difference 
-
+#La Chauxdfnd and ValdeTravers
 
 #Find which region has the highest percent of men in agriculture and retunr only the 
 #percent and region name.  Use pipe operators to accomplish this. 
